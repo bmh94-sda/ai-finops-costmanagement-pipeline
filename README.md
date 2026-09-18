@@ -112,9 +112,13 @@ Built in Tableau Public on top of `gold_daily_product_cost`:
 
 ## 🛠️ Tools used
 
-**Python** (pandas, numpy) · **SQLite** · **Tableau Public**
+**Python** — pandas & numpy for data generation and transformation, `sqlite3` for the local data warehouse, matplotlib for exploratory charting
+**SQLite** — lightweight local warehouse for the Bronze/Silver/Gold layers
+**Tableau Public** — final dashboard, calculated fields, filters
 
-Claude and GitHub Copilot/Codex were used to accelerate pipeline scaffolding, debugging, and documentation throughout — all logic was independently reviewed and validated before use.
+**Key techniques:** multi-source joins (`pd.merge`), grouped aggregation (`groupby().agg()`), shared-cost allocation logic, SQLite read/write (`to_sql` / `read_sql`), synthetic data generation with weighted randomization and reproducible seeding (`random.seed`, `np.random.seed`)
+
+**Claude** was used throughout to accelerate pipeline design, debugging, and documentation — all logic was independently reviewed, tested, and validated before use.
 
 ---
 
