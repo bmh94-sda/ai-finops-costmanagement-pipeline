@@ -47,6 +47,10 @@ Three disconnected raw data sources are simulated, mirroring what a real company
 
 ## 🏗️ Architecture: Bronze → Silver → Gold
 
+<div align="center">
+<img src="analysis/architecture_diagram.png" alt="Architecture Diagram" width="750">
+</div>
+
 ```
 Bronze                Silver                          Gold
 ──────                ──────                          ────
